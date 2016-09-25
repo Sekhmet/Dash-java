@@ -1,0 +1,19 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="io.github.sekhmet.feedlysource">
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true">
+        <service
+            android:name=".FeedlySource"
+            android:description="@string/source_feedly_description"
+            android:icon="@drawable/ic_feedly"
+            android:label="@string/source_feedly_name">
+            <intent-filter>
+                <action android:name="io.github.sekhmet.dashapi.DashSource"/>
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RedditSource</string>
+    <string name="source_reddit_name">Reddit</string>
+    <string name="source_reddit_description">Your subreddits in Dash</string>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Dash</string>
+    <string name="pref_source_enable_title">Włącz źródło</string>
+    <string name="pref_source_enable_summary">Pozwól temu źródłu pobierać dane</string>
+    <string name="pref_source_refresh_frequency_summary">%s</string>
+    <string name="pref_source_refresh_frequency_title">Częstotliwość odświeżania</string>
+    <string name="title_activity_settings">Ustawienia</string>
+    <string name="pref_category_sources">Źródła</string>
+    <string name="pref_source_refresh_frequency_1">15 minut</string>
+    <string name="pref_source_refresh_frequency_2">30 minut</string>
+    <string name="pref_source_refresh_frequency_3">1 godzina</string>
+    <string name="pref_source_refresh_frequency_4">3 godziny</string>
+    <string name="pref_source_refresh_frequency_5">6 godzin</string>
+    <string name="pref_source_refresh_frequency_6">12 godzin</string>
+    <string name="pref_source_refresh_frequency_7">24 godziny</string>
+</resources>
