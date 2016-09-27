@@ -42,7 +42,7 @@ public class SettingsFragment extends PreferenceFragment {
                 Intent intent = new Intent(getActivity(), SourceSettingsActivity.class);
                 intent.putExtra(getString(R.string.intent_extra_source), source);
                 startActivity(intent);
-                return false;
+                return true;
             }
         });
     }
