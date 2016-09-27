@@ -1,6 +1,6 @@
 package io.github.sekhmet.dash;
 
-import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
@@ -11,8 +11,6 @@ import io.github.sekhmet.dash.manager.Source;
 import io.github.sekhmet.dash.manager.SourceManager;
 
 public class SettingsFragment extends PreferenceFragment {
-
-    OnSourceClickListener onSourceClickListener;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -30,7 +28,7 @@ public class SettingsFragment extends PreferenceFragment {
         }
     }
 
-    public void createSourceCategory(Source source) {
+    public void createSourceCategory(final Source source) {
         Preference preference = new Preference(getActivity());
 
         preference.setIcon(source.icon);
@@ -38,22 +36,15 @@ public class SettingsFragment extends PreferenceFragment {
         preference.setSummary(source.description);
         getPreferenceScreen().addItemFromInflater(preference);
 
-        final SourceSettingsFragment sourceSettingsFragment = new SourceSettingsFragment();
-
         preference.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override
             public boolean onPreferenceClick(Preference preference) {
-                onSourceClickListener.onSourceClick(sourceSettingsFragment);
-                return true;
+                Intent intent = new Intent(getActivity(), SourceSettingsActivity.class);
+                intent.putExtra(getString(R.string.intent_extra_source), source);
+                startActivity(intent);
+                return false;
             }
         });
     }
 
-    public void setOnSourceClickListener(OnSourceClickListener onSourceClickListener) {
-        this.onSourceClickListener = onSourceClickListener;
-    }
-
-    public interface OnSourceClickListener {
-        boolean onSourceClick(Fragment fragment);
-    }
 }

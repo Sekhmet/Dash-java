@@ -1,13 +1,13 @@
 package io.github.sekhmet.dash;
 
-import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class FeedActivity extends AppCompatActivity implements SettingsFragment.OnSourceClickListener {
+public class FeedActivity extends AppCompatActivity {
 
     Toolbar toolbar;
 
@@ -27,35 +27,15 @@ public class FeedActivity extends AppCompatActivity implements SettingsFragment.
     }
 
     @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-    }
-
-    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.menu_item_settings:
-
-                SettingsFragment fragment = new SettingsFragment();
-
-                fragment.setOnSourceClickListener(this);
-
-                getFragmentManager().beginTransaction()
-                        .replace(R.id.fragment_container, fragment)
-                        .addToBackStack("settings")
-                        .commit();
+                Intent intent = new Intent(this, SettingsActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
                 return true;
         }
 
         return false;
-    }
-
-    @Override
-    public boolean onSourceClick(Fragment fragment) {
-        getFragmentManager().beginTransaction()
-                .replace(R.id.fragment_container, fragment)
-                .addToBackStack("settings")
-                .commit();
-        return true;
     }
 }

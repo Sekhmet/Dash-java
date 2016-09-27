@@ -14,4 +14,5 @@
     <string name="pref_source_refresh_frequency_5">6 godzin</string>
     <string name="pref_source_refresh_frequency_6">12 godzin</string>
     <string name="pref_source_refresh_frequency_7">24 godziny</string>
+    <string name="title_activity_source_settings">Ustawienia źródła</string>
 </resources>

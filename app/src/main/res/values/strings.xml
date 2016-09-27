@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Dash</string>
     <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_source_settings">Source Settings</string>
 
     <string name="pref_category_sources">Sources</string>
     <string name="pref_source_enable_title">Enable source</string>
@@ -25,4 +26,6 @@
         <item>@string/pref_source_refresh_frequency_6</item>
         <item>@string/pref_source_refresh_frequency_7</item>
     </string-array>
+
+    <string name="intent_extra_source">source</string>
 </resources>
