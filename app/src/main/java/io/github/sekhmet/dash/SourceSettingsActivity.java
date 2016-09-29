@@ -29,6 +29,8 @@ public class SourceSettingsActivity extends AppCompatActivity {
 
             SourceSettingsFragment fragment = new SourceSettingsFragment();
 
+            fragment.setSource(source);
+
             getFragmentManager()
                     .beginTransaction()
                     .replace(R.id.source_settings_container, fragment)
