@@ -39,7 +39,7 @@ public class SourceSettingsFragment extends PreferenceFragment {
         listPreference.setSummary(getString(R.string.pref_source_refresh_frequency_summary));
         listPreference.setEntries(R.array.pref_source_refresh_frequency_entries);
         listPreference.setEntryValues(refreshRateKeys);
-        listPreference.setDefaultValue(2);
+        listPreference.setDefaultValue("2");
         screen.addItemFromInflater(listPreference);
     }
 }
