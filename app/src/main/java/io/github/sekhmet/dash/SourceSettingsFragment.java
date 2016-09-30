@@ -31,15 +31,5 @@ public class SourceSettingsFragment extends PreferenceFragment {
         switchPreference.setTitle(getString(R.string.pref_source_enable_title));
         switchPreference.setDefaultValue(true);
         screen.addItemFromInflater(switchPreference);
-
-        String[] refreshRateKeys = {"1", "2", "3", "4", "5", "6", "7"};
-        ListPreference listPreference = new ListPreference(getActivity());
-        listPreference.setKey(key + "dash_key_refresh_rate");
-        listPreference.setTitle(getString(R.string.pref_source_refresh_frequency_title));
-        listPreference.setSummary(getString(R.string.pref_source_refresh_frequency_summary));
-        listPreference.setEntries(R.array.pref_source_refresh_frequency_entries);
-        listPreference.setEntryValues(refreshRateKeys);
-        listPreference.setDefaultValue("2");
-        screen.addItemFromInflater(listPreference);
     }
 }

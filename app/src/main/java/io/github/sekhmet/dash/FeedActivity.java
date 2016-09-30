@@ -4,11 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
@@ -19,6 +15,7 @@ import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 
 public class FeedActivity extends AppCompatActivity {
 
+    Drawer drawer;
     Toolbar toolbar;
 
     @Override
@@ -42,7 +39,7 @@ public class FeedActivity extends AppCompatActivity {
         DimenHolder holder = new DimenHolder();
         holder.setDp(160);
 
-        new DrawerBuilder()
+        drawer = new DrawerBuilder()
                 .withActivity(this)
                 .withToolbar(toolbar)
                 .withHeader(R.layout.layout_drawer_header)
@@ -67,25 +64,16 @@ public class FeedActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
+    protected void onResume() {
+        super.onResume();
+        drawer.setSelection(1);
     }
 
     private boolean openSettings() {
+        drawer.closeDrawer();
         Intent intent = new Intent(this, SettingsActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
         return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.menu_item_settings:
-                return openSettings();
-        }
-
-        return false;
     }
 }

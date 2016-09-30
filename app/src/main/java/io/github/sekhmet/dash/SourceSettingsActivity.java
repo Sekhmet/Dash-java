@@ -22,8 +22,6 @@ public class SourceSettingsActivity extends AppCompatActivity {
 
         Source source = getIntent().getParcelableExtra(getString(R.string.intent_extra_source));
 
-        // TODO: Pass source to the fragment.
-
         if (source != null) {
             setTitle(source.name);
 
