@@ -1,10 +1,12 @@
 package io.github.sekhmet.dash;
 
+import android.content.ComponentName;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Toast;
 
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
@@ -12,6 +14,11 @@ import com.mikepenz.materialdrawer.holder.DimenHolder;
 import com.mikepenz.materialdrawer.model.DividerDrawerItem;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
+
+import java.util.List;
+
+import io.github.sekhmet.dash.manager.Source;
+import io.github.sekhmet.dash.manager.SourceManager;
 
 public class FeedActivity extends AppCompatActivity {
 
@@ -61,6 +68,16 @@ public class FeedActivity extends AppCompatActivity {
                     }
                 })
                 .build();
+
+        SourceManager sourceManager = new SourceManager(this);
+        sourceManager.loadSources();
+        List<Source> sourceList = sourceManager.getSources();
+
+        Toast.makeText(this, sourceList.get(0).componentName.toString(), Toast.LENGTH_LONG).show();
+
+        Intent intent = new Intent();
+        intent.setComponent(sourceList.get(0).componentName);
+        startService(intent);
     }
 
     @Override

@@ -7,6 +7,7 @@
         android:supportsRtl="true">
         <service
             android:name=".FeedlyService"
+            android:exported="true"
             android:description="@string/source_feedly_description"
             android:icon="@drawable/ic_feedly"
             android:label="@string/source_feedly_name">
