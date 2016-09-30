@@ -1,1 +1,1 @@
-include ':app', ':dashapi', ':feedlysource', ':redditsource'
+include ':app', ':dashapi', ':feedlysource'

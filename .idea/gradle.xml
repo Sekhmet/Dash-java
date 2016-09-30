@@ -12,7 +12,6 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/dashapi" />
             <option value="$PROJECT_DIR$/feedlysource" />
-            <option value="$PROJECT_DIR$/redditsource" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

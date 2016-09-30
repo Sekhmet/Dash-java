@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RedditSource</string>
+    <string name="source_reddit_description">Your subreddits in Dash</string>
+    <string name="source_reddit_name">Reddit</string>
+</resources>
