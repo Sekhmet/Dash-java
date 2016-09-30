@@ -12,7 +12,7 @@
             android:icon="@drawable/ic_reddit"
             android:label="@string/source_reddit_name">
             <intent-filter>
-                <action android:name="io.github.sekhmet.dashapi.DashSource"/>
+                <action android:name="io.github.sekhmet.dashapi.DashService"/>
             </intent-filter>
         </service>
     </application>
