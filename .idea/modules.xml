@@ -5,7 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/Dash.iml" filepath="$PROJECT_DIR$/Dash.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/dashapi/dashapi.iml" filepath="$PROJECT_DIR$/dashapi/dashapi.iml" />
-      <module fileurl="file://$PROJECT_DIR$/feedlysource/feedlysource.iml" filepath="$PROJECT_DIR$/feedlysource/feedlysource.iml" />
     </modules>
   </component>
 </project>

@@ -9,9 +9,7 @@ import android.content.pm.ResolveInfo;
 import java.util.ArrayList;
 import java.util.List;
 
-import io.github.sekhmet.dashapi.DashService;
-
-import static io.github.sekhmet.dashapi.DashService.ACTION_DASH_SOURCE;
+import static io.github.sekhmet.dashapi.Constants.ACTION_DASH_SOURCE;
 
 public class SourceManager {
     private List<Source> mSources = new ArrayList<>();

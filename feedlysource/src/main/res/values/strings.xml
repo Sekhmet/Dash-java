@@ -1,5 +1,0 @@
-<resources>
-    <string name="app_name">FeedlySource</string>
-    <string name="source_feedly_name">Feedly</string>
-    <string name="source_feedly_description">Get your feeds from Feedly</string>
-</resources>
