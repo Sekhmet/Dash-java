@@ -27,7 +27,6 @@ public class SourceSettingsFragment extends PreferenceFragment {
         SwitchPreference switchPreference = new SwitchPreference(getActivity());
         switchPreference.setKey(key + "dash_key_enabled");
         switchPreference.setTitle(getString(R.string.pref_source_enable_title));
-        switchPreference.setDefaultValue(true);
         screen.addItemFromInflater(switchPreference);
     }
 }
