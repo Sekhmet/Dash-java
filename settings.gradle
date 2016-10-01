@@ -1,1 +1,1 @@
-include ':app', ':dashapi'
+include ':app', ':dashapi', ':hackernewssource'

@@ -1,0 +1,22 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="io.github.sekhmet.hackernewssource">
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        >
+
+        <service
+            android:name=".HackerNewsService"
+            android:description="@string/hn_source_description"
+            android:icon="@drawable/ic_source_hn"
+            android:label="@string/hn_source_name">
+            <intent-filter>
+                <action android:name="io.github.sekhmet.dashapi.DashService"/>
+            </intent-filter>
+        </service>
+
+    </application>
+
+</manifest>
