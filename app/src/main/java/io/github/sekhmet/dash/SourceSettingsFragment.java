@@ -1,11 +1,9 @@
 package io.github.sekhmet.dash;
 
 import android.os.Bundle;
-import android.preference.ListPreference;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
-import android.widget.Toast;
 
 import io.github.sekhmet.dash.manager.Source;
 

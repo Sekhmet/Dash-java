@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.Switch;
 
 public class ClickableSwitchPreference extends SwitchPreference {
+    private SwitchClickListener listener = null;
+
     public ClickableSwitchPreference(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
@@ -19,14 +21,6 @@ public class ClickableSwitchPreference extends SwitchPreference {
     public ClickableSwitchPreference(Context context) {
         super(context);
     }
-
-    interface SwitchClickListener {
-        public void onSwitchClicked(boolean checked);
-
-        public void onPreferenceClicked();
-    }
-
-    private SwitchClickListener listener = null;
 
     public void setSwitchClickListener(SwitchClickListener listener) {
         this.listener = listener;
@@ -74,5 +68,11 @@ public class ClickableSwitchPreference extends SwitchPreference {
             }
         });
 
+    }
+
+    interface SwitchClickListener {
+        public void onSwitchClicked(boolean checked);
+
+        public void onPreferenceClicked();
     }
 }

@@ -13,7 +13,7 @@
             android:icon="@drawable/ic_source_hn"
             android:label="@string/hn_source_name">
             <intent-filter>
-                <action android:name="io.github.sekhmet.dashapi.DashService"/>
+                <action android:name="io.github.sekhmet.dashapi.DashService" />
             </intent-filter>
         </service>
 

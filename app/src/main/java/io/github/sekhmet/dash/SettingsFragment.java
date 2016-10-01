@@ -2,10 +2,7 @@ package io.github.sekhmet.dash;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.preference.Preference;
 import android.preference.PreferenceFragment;
-import android.preference.SwitchPreference;
-import android.widget.Toast;
 
 import java.util.List;
 
@@ -44,7 +41,7 @@ public class SettingsFragment extends PreferenceFragment {
         preference.setTitle(source.name);
         preference.setSummary(source.description);
         getPreferenceScreen().addItemFromInflater(preference);
-        
+
         preference.setSwitchClickListener(new ClickableSwitchPreference.SwitchClickListener() {
             @Override
             public void onSwitchClicked(boolean checked) {
